@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="title-container">
+    <div class="profile-title">
+        <h2>TARTAS PERSONALIZADAS 🧠🎨</h2>
+        <p style="margin-top: 20px; padding: 20px;">¡Tartas personalizadas para cada ocasión especial! Desde cumpleaños hasta bodas, las tartas son el centro de atención de cualquier celebración. Con una amplia variedad de sabores, rellenos y diseños, puedes crear una tarta única que refleje tu estilo y gusto personal. ¡Deja volar tu imaginación y crea una obra maestra comestible que impresionará a todos tus invitados! Recuerda que si encuentras alguna tarta que te fascine, ¡puedes añadirla a tus favoritos y luego finalizar tu pedido por WhatsApp!</p>
+        <button routerLink="/contacto" style="margin-top: 30px; padding: 15px;">PIDE YA TU TARTA PERSONALIZADA!</button>
+    </div>
+</div>
+<div class="all-container">
+<div class="container" >
+    <div class="favoritos-container" *ngFor="let producto of tartasPersonalizadas">
+         <!-- TODO: CREAR UN BOTON PARA QUE EDITE Y LUEGO BORRE LOS PRODUCTOS. YA ESTA IMPLEMENTADO EN EL TS, PERO NO SE PORQUE NO SALE EL BOTON... -->
+       <!-- <div *ngIf="isAdmin" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 5px; gap: 5px">
+        <button [routerLink]="['/admin/edit-product', producto._id]" >Editar</button>
+        <button (click)="deleteProduct(producto._id)" >Eliminar</button>
+      </div>  -->
+        <div class="card-container">
+            <div class="products-favoritos">
+                <img [src]="producto.image" />
+            <div class="descripcion-producto" >
+              <h3 class="texto-acortado">{{ producto.category.toUpperCase() }}</h3>
+              <h2 class="titulo-acortado">{{ producto.name }}</h2>
+              <p class="texto-acortado">{{ producto.description }}</p>
+            </div>
+            <div class="button-container">
+              <button style="background-color: rgba(255, 0, 217, 0.507);" class="btn-fav" (click)="addToFavorites(producto._id)" [ngClass]="{'favorite': isFavorite(producto._id)}" >
+                <i class="fa-regular fa-star" ></i> Agregar este producto a favoritos
+              </button>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

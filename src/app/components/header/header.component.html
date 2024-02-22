@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+<header>
+    <img routerLink="/landing" class="logo" src="../../assets/logo.png" alt="Logo">
+    <button class="abrir-menu" (click)="toggleNav()"><i class="bi bi-list"></i></button>
+    <nav class="nav" [class.visible]="navVisible">
+        <button class="cerrar-menu" (click)="toggleNav()"><i class="bi bi-x"></i></button>
+        <ul class="nav-list">
+            <li><a routerLink="/landing">INICIO</a></li>
+            <li><a routerLink="/products">SELECCIÓN</a></li>
+            <!-- <li class="extra-li" *ngIf="navVisible"><a routerLink="/products">LO MÁS PEDIDO</a></li> -->
+            <li><a routerLink="/mesa-dulce">MESA DULCE</a></li>
+            <li><a routerLink="/alfajores-galletas" href="#">ALFAJORES Y GALLETAS</a></li>
+            <li><a routerLink="/semifrios" href="#">SEMIFRÍOS</a></li>
+            <li><a routerLink="/tartas-personalizadas" href="#">TARTAS PERSONALIZADAS</a></li>
+            <li><a routerLink="/tartas-tradicionales" href="#">TARTAS TRADICIONALES</a></li>
+            <li><a routerLink="/profile" href="#">PERFIL</a></li>
+            <li><a routerLink="/contacto" href="#">CONTACTO</a></li>
+            <li *ngIf="isAdmin"><a routerLink="/admin/create-product" href="#">CREAR PRODUCTO</a></li>
+        </ul>
+    </nav>
+</header>

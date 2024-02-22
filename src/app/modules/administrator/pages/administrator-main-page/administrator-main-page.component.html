@@ -1,0 +1,16 @@
+
+<router-outlet></router-outlet>
+
+<div class="admin-page-container">
+  <h2>Panel administrativo para gestionar los productos:</h2>
+</div>
+
+
+
+<div *ngFor="let product of productList">
+  <h2>Name: {{product.name}}</h2>
+  <div>
+    <button [routerLink]="['edit-product']">Editar producto</button>
+</div>
+
+</div>

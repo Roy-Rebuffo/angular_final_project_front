@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="title-container">
+    <div class="profile-title">
+        <h2 style="font-size: 50px; padding: 20px;">ALFAJORES Y GALLETAS🍪</h2>
+        <p style="margin-top: 20px; padding: 20px;"> Galletas de todos los colores, sabores y tamaños. Con glasé, mermelada, rellenas, son el souvenir perfecto si quieres personalizar tu fiesta. También alfajores de muchísimos sabores y tamaños para compartir o regalar.🎁 Recuerda que si te gusta algún producto lo puedes añadir a favoritos y luego por WhatsApp terminar de realizar tu pedido.</p>
+    </div>
+</div>
+<div class="all-container">
+<div class="container" >
+    <div class="favoritos-container" *ngFor="let producto of alfajoresGalletasProducts">
+         <!-- TODO: CREAR UN BOTON PARA QUE EDITE Y LUEGO BORRE LOS PRODUCTOS. YA ESTA IMPLEMENTADO EN EL TS, PERO NO SE PORQUE NO SALE EL BOTON... -->
+       <!-- <div *ngIf="isAdmin" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 5px; gap: 5px">
+        <button [routerLink]="['/admin/edit-product', producto._id]" >Editar</button>
+        <button (click)="deleteProduct(producto._id)" >Eliminar</button>
+      </div>  -->
+        <div class="card-container">
+            <div class="products-favoritos">
+                <img [src]="producto.image" />
+            <div class="descripcion-producto" >
+              <h3 class="texto-acortado">{{ producto.category.toUpperCase() }}</h3>
+              <h2 class="titulo-acortado">{{ producto.name }}</h2>
+              <p class="texto-acortado">{{ producto.description }}</p>
+            </div>
+            <div class="button-container">
+              <button style="background-color: rgba(255, 0, 217, 0.507);" class="btn-fav" (click)="addToFavorites(producto._id)" [ngClass]="{'favorite': isFavorite(producto._id)}" >
+                <i class="fa-regular fa-star" ></i> Agregar este producto a favoritos
+              </button>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

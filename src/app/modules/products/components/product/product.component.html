@@ -1,0 +1,17 @@
+  <div class="container">
+    <div *ngIf="isAdmin" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 5px; gap: 5px">
+      <button [routerLink]="['/admin/edit-product', producto._id]" >Editar</button>
+      <button (click)="deleteProduct(producto._id)" >Eliminar</button>
+    </div>
+    <img [src]="producto.image" />
+    <div class="descripcion-producto">
+      <h3 class="texto-acortado">{{ producto.category.toUpperCase() }}</h3>
+      <h2 class="titulo-acortado">{{ producto.name }}</h2>
+      <p class="texto-acortado">{{ producto.description }}</p>
+    </div>
+    <div class="button-container">
+      <button style="background-color: rgba(255, 0, 217, 0.507);" class="btn-fav" (click)="addToFavorites(producto._id)" [ngClass]="{'favorite': isFavorite(producto._id)}" >
+        <i class="fa-regular fa-star" ></i> Agregar este producto a favoritos
+      </button>
+  </div>
+  </div>

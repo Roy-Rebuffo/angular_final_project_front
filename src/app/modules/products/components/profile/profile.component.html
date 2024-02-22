@@ -1,0 +1,48 @@
+<!-- todo: ordenar de 3 en 3 las cartas como en el product.component.html -->
+<!-- todo: si no hay favoritos, mostrar mensaje de que no hay favoritos -->
+<app-header></app-header>
+<div class="title-container">
+    <div class="profile-title">
+        <h2 >ESTA ES TU SECCIÓN DE FAVORITOS 😍</h2>
+        <p style="margin-top: 20px; padding: 20px;"> ¡Tienes productos guardados en tus favoritos! A partir de ahora, puedes enviarnos un mensaje por WhatsApp al número <a href="https://wa.me/628310320">628310320</a> y explicarnos que es lo que te ha interesado! Si tienes alguna duda, también te informaremos sobre cualquier cosa que tenga que ver con la carta o algún pedido especial que tengas en mente 🧠.</p>
+    </div>
+</div>
+<div class="all-container">
+<div class="container" >
+    
+    
+    <div class="favoritos-container" *ngFor="let favorito of favoritos">
+        
+        <div class="card-container">
+            <div class="products-favoritos">
+                <img [src]="favorito.image" />
+            <div class="descripcion-producto" >
+              <h3 class="texto-acortado">{{ favorito.category.toUpperCase() }}</h3>
+              <h2 class="titulo-acortado">{{ favorito.name }}</h2>
+              <p class="texto-acortado">{{ favorito.description }}</p>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+ <!-- <div *ngIf="isAdmin" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 5px; gap: 5px">
+      <button [routerLink]="['/admin/edit-product', producto._id]" >Editar</button>
+      <button (click)="deleteProduct(producto._id)" >Eliminar</button>
+    </div> -->
+
+    <!-- <div class="button-container">
+    <button (click)="addToFavorites(producto._id)"  >
+      <i  class="fa-regular fa-star" [ngClass]="{'favorite': isFavorite(producto._id)}"></i> Agregar este producto a favoritos
+    </button>
+  </div> -->

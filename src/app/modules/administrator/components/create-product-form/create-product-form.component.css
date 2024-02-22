@@ -1,0 +1,40 @@
+form {
+    width: 100%; /* Ajusta el ancho del formulario según sea necesario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Añade un poco de espacio alrededor del formulario */
+    border: 1px solid #ccc; /* Añade un borde alrededor del formulario */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Añade espacio entre cada grupo de formulario */
+  }
+  
+  label {
+    display: block; /* Muestra las etiquetas en una nueva línea */
+    margin-bottom: 5px; /* Añade espacio entre las etiquetas y los campos de entrada */
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%; /* Ajusta el ancho de los campos de entrada al 100% del contenedor */
+    padding: 10px; /* Añade espacio interno a los campos de entrada */
+    border: 1px solid #ccc; /* Añade un borde a los campos de entrada */
+    border-radius: 5px; /* Añade esquinas redondeadas a los campos de entrada */
+  }
+  
+  button {
+    width: 100%; /* Ajusta el ancho del botón al 100% del contenedor */
+    padding: 10px; /* Añade espacio interno al botón */
+    background-color: #007bff; /* Cambia el color de fondo del botón */
+    color: #fff; /* Cambia el color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    border-radius: 5px; /* Añade esquinas redondeadas al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo del botón */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+  }
+  
