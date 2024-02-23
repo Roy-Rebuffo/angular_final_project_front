@@ -105,8 +105,7 @@ form {
 
 .input-box > input:focus,
 .input-box > textarea:focus {
-    border-bottom:3px solid crimson;
-    animation: shake .2s;
+    border-bottom:3px solid whitesmoke;
 }
 
 .input-box > textarea {
@@ -133,7 +132,7 @@ form {
 }
 
 .input-box > input:focus ~ i {
-    color:crimson;
+    color:gray;
 }
 
 form > button {
@@ -150,7 +149,7 @@ form > button {
 
 form > button:hover,
 .links > a:hover {
-    background: rgb(172, 16, 47);
+    background: whitesmoke;
 }
 
 @keyframes shake { 
