@@ -14,8 +14,9 @@
             <li><a routerLink="/semifrios" href="#">SEMIFRÍOS</a></li>
             <li><a routerLink="/tartas-personalizadas" href="#">TARTAS PERSONALIZADAS</a></li>
             <li><a routerLink="/tartas-tradicionales" href="#">TARTAS TRADICIONALES</a></li>
-            <li><a routerLink="/profile" href="#">PERFIL</a></li>
+            <li><a routerLink="/profile" href="#">MIS FAVORITOS</a></li>
             <li><a routerLink="/contacto" href="#">CONTACTO</a></li>
+            <li *ngIf="isAdmin"><a routerLink="/formulario-receptor" href="#">PEDIDOS</a></li>
             <li *ngIf="isAdmin"><a routerLink="/admin/create-product" href="#">CREAR PRODUCTO</a></li>
         </ul>
     </nav>

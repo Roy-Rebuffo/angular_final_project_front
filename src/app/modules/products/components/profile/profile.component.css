@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(230, 226, 231);
+    background-color: #638889a3;
 }
 .profile-title{
     display: flex;
@@ -27,7 +27,7 @@
 
 .all-container{
     width: 100%;
-    background-color: rgb(230, 226, 231);
+    background-color: #638889a3;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@
     align-items: center;
     max-width: 500px;
     max-width: 400px;
-    background: #C7C6D1;
+    background: #F5E8DD;
     border-radius: 20px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.469);
   }

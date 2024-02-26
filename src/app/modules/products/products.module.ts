@@ -15,6 +15,9 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { FormularioService } from './services/Formulario.service';
+// import { FormularioReceptorComponent } from './components/formulario-receptor/formulario-receptor.component';
+
 
 
 
@@ -34,12 +37,15 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     HeaderComponent,
     FooterComponent,
     ProfileComponent,
-    ContactoComponent
+    ContactoComponent,
+    // FormularioReceptorComponent,
     
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
-  ]
+    ProductsRoutingModule,
+    
+  ],
+  providers: [FormularioService]
 })
 export class ProductsModule { }

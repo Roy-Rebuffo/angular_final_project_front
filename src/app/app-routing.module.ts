@@ -11,6 +11,7 @@ import { TartasPersonalizadasComponent } from './modules/products/components/tar
 import { TartasTradicionalesComponent } from './modules/products/components/tartas-tradicionales/tartas-tradicionales.component';
 import { ProfileComponent } from './modules/products/components/profile/profile.component';
 import { ContactoComponent } from './modules/products/components/contacto/contacto.component';
+// import { FormularioReceptorComponent } from './modules/products/components/formulario-receptor/formulario-receptor.component';
 
 const routes: Routes = [
 
@@ -47,6 +48,9 @@ const routes: Routes = [
 {
   path: 'contacto', component: ContactoComponent
 },
+// {
+//   path: 'formulario-receptor', component: FormularioReceptorComponent
+// },
 //hace que si no encuentra ninguna ruta vaya a landing
 {
   path: '**', redirectTo: 'landing', pathMatch: 'full'
