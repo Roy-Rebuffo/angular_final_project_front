@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AdminActionsService } from '../../services/admin-actions.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-product-form',
@@ -12,7 +13,7 @@ export class CreateProductFormComponent {
   createProductForm!: FormGroup
   selectedFile!: File | null
 
-  constructor(private fb: FormBuilder, private adminActions: AdminActionsService){
+  constructor(private fb: FormBuilder, private adminActions: AdminActionsService, private router: Router){
     this.createProductForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
@@ -54,6 +55,8 @@ export class CreateProductFormComponent {
     this.adminActions.createProduct(formData).subscribe({
       next: (response) => {
           console.log(response)
+
+          this.router.navigate(['/products']); 
       },
       error: (error) => {
         console.log(error)
